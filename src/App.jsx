@@ -1,16 +1,13 @@
 import "./App.css";
+import { DrinkButtons } from "./components/DrinkButtons";
 
-function App() {
-  const greeting = "Hello user";
-  const description = <p> This app is going to change your life. </p>;
+export const App = () => {
+  const greeting = "Welcome in our cafe";
 
   return (
-    <div className="App">
-      <h1>Welcome!</h1>
-      <p>{greeting}</p>
-      {description};
+    <div className="app">
+      <h1>{greeting}</h1>
+      <DrinkButtons />
     </div>
   );
-}
-
-export default App;
+};

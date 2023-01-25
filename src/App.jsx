@@ -1,11 +1,13 @@
+import { useState } from "react";
 import "./App.css";
 import { DrinkButtons } from "./components/DrinkButtons";
 import { DrinkChoice } from "./components/DrinkChoice";
 import { coffee, tea } from "./utils/data";
 
 export const App = () => {
+  const [userDrink, setUserDrink] = useState(tea);
+
   const greeting = "Welcome in our cafe";
-  const userDrink = coffee;
 
   return (
     <div className="app">

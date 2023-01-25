@@ -5,13 +5,18 @@ import { coffee, tea } from "./utils/data";
 
 export const App = () => {
   const greeting = "Welcome in our cafe";
-  const userDrink = tea;
+  const userDrink = coffee;
 
   return (
     <div className="app">
-      <h1>{greeting}</h1>
-      <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
-      <DrinkChoice drink={userDrink} />
+      {userDrink ? (
+        <DrinkChoice drink={userDrink} />
+      ) : (
+        <>
+          <h1>{greeting}</h1>
+          <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
+        </>
+      )}
     </div>
   );
 };

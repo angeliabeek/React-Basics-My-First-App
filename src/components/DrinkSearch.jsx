@@ -3,13 +3,13 @@ import { availableDrinks } from "../utils/data";
 import { DrinkItems } from "./DrinkItems";
 import { TextInput } from "./ui/TextInput";
 
-export const DrinkSearch = () => {
-  const [searchField, setSearchField] = useState('test drink');
+export const DrinkSearch = ({ onClick }) => {
+  const [searchField, setSearchField] = useState("test drink");
   return (
     <>
       <label>Search for drinks</label>
       <TextInput />
-      <DrinkItems drinks={availableDrinks}/>
+      <DrinkItems onClick={onClick} drinks={availableDrinks} />:
     </>
   );
 };

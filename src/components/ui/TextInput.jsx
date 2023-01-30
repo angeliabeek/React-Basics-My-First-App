@@ -1,3 +1,5 @@
 import "./TextInput.css";
 
-export const TextInput = () => <input className="text-input"></input>;
+export const TextInput = ({ onChange }) => (
+  <input className="text-input" onChange={onChange}></input>
+);

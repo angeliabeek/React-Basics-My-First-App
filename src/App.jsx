@@ -3,8 +3,6 @@ import "./App.css";
 import { DrinkChoice } from "./components/DrinkChoice";
 import { DrinkSearch } from "./components/DrinkSearch";
 
-
-
 export const App = () => {
   const [userDrink, setUserDrink] = useState();
 

@@ -1,3 +1,4 @@
+import { Heading } from "@chakra-ui/react";
 import { useState } from "react";
 import "./App.css";
 import { DrinkChoice } from "./components/DrinkChoice";
@@ -11,10 +12,12 @@ export const App = () => {
   return (
     <div className="app">
       {userDrink ? (
-        <DrinkChoice drink={userDrink} onClick={setUserDrink}/>
+        <DrinkChoice drink={userDrink} onClick={setUserDrink} />
       ) : (
         <>
-          <h1>{greeting}</h1>
+          <Heading marginBottom="2rem" fontSize="3xl" color="blue.400">
+            {greeting}
+          </Heading>
           <DrinkSearch onClick={setUserDrink} />
         </>
       )}

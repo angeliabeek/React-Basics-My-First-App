@@ -1,3 +1,4 @@
+import { Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { availableDrinks } from "../utils/data";
 import { DrinkItems } from "./DrinkItems";
@@ -14,8 +15,10 @@ export const DrinkSearch = ({ onClick }) => {
 
   return (
     <>
-      <label>Search for drinks</label>
-      <TextInput onChange={handleChange} />
+      <Text color="blue.700" fontWeight="bold" fontSize="1.25rem">
+        Search for drinks
+      </Text>
+      <TextInput onChange={handleChange} w={200} mb={8} />
       <DrinkItems onClick={onClick} drinks={matchedDrinks} />
     </>
   );
